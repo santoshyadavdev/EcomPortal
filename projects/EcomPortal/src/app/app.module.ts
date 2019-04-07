@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomCommonModule } from './common/common.module';
 import { MaterialSharedModule } from './material-shared/material-shared.module';
 import { RouterModule } from '@angular/router';
+import { AdminModule } from './admin/admin.module';
+import { UserModule } from './user/user.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { RouterModule } from '@angular/router';
     BrowserAnimationsModule,
     MaterialSharedModule,
     RouterModule.forRoot([]),
-    CustomCommonModule
+    CustomCommonModule,
+    UserModule,
+    AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]

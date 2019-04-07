@@ -4,7 +4,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import {
   MatToolbarModule, MatSidenavModule,
   MatIconModule, MatListModule, MatFormFieldModule,
-  MatInputModule, MatButtonModule
+  MatInputModule, MatButtonModule, MatSnackBarModule
 } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -28,6 +28,7 @@ const AppConfig: IAppConfig = {
     MatIconModule,
     MatListModule,
     MatFormFieldModule,
+    MatSnackBarModule,
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
@@ -40,6 +41,7 @@ const AppConfig: IAppConfig = {
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
+    MatSnackBarModule,
     MatIconModule,
     MatListModule,
     MatFormFieldModule,
