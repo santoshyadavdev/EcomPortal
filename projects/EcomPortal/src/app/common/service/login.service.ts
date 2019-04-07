@@ -6,6 +6,7 @@ import { IUser } from './user';
 import { environment } from '../../../environments/environment';
 import { APP_CONFIG } from '../../material-shared/AppConfig';
 import { IAppConfig } from '../../material-shared/IAppConfig';
+import { IResponse } from './loginResponse';
 
 
 @Injectable({
@@ -14,13 +15,13 @@ import { IAppConfig } from '../../material-shared/IAppConfig';
 export class LoginService {
 
   constructor(private http: HttpClient,
-              @Inject(APP_CONFIG) private appConfig: IAppConfig) {
+    @Inject(APP_CONFIG) private appConfig: IAppConfig) {
     console.log(appConfig.apiEndPoint);
   }
 
 
   login(user: IUser) {
-    return this.http.post(this.appConfig.apiEndPoint + '/user/login', user);
+    return this.http.post<IResponse>(this.appConfig.apiEndPoint + '/user/login', user);
   }
 
 }
