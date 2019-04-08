@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@ecom/core": [
+        "dist/ecom/core"
+      ],
+      "@ecom/core/*": [
+        "dist/ecom/core/*"
+      ]
+    }
   }
 }
