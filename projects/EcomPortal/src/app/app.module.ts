@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -8,6 +9,7 @@ import { MaterialSharedModule } from './material-shared/material-shared.module';
 import { RouterModule } from '@angular/router';
 import { AdminModule } from './admin/admin.module';
 import { UserModule } from './user/user.module';
+import { CustomInterceptorService } from './common/custom-interceptor/custom-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { UserModule } from './user/user.module';
     UserModule,
     AdminModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: CustomInterceptorService, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
