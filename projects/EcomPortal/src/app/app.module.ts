@@ -6,11 +6,9 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomCommonModule } from './common/common.module';
 import { MaterialSharedModule } from './material-shared/material-shared.module';
-import { RouterModule } from '@angular/router';
-import { AdminModule } from './admin/admin.module';
-import { UserModule } from './user/user.module';
 import { CustomInterceptorService } from './common/custom-interceptor/custom-interceptor.service';
 import { ErrorHandlerService } from './common/error-handler/error-handler.service';
+import { RoutingModule } from './routing/routing.module';
 
 @NgModule({
   declarations: [
@@ -20,10 +18,8 @@ import { ErrorHandlerService } from './common/error-handler/error-handler.servic
     BrowserModule,
     BrowserAnimationsModule,
     MaterialSharedModule,
-    RouterModule.forRoot([]),
     CustomCommonModule,
-    UserModule,
-    AdminModule
+    RoutingModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: CustomInterceptorService, multi: true },

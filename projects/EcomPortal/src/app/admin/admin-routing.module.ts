@@ -5,7 +5,7 @@ import { AuthGuard } from '../common/guard/auth.guard';
 import { AdminGuard } from './guard/admin.guard';
 
 const routes: Routes = [
-  {path: 'admin/dashboard', component : DashboardComponent, canActivate : [ AuthGuard , AdminGuard ] }
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard, AdminGuard] }
 ];
 
 @NgModule({
