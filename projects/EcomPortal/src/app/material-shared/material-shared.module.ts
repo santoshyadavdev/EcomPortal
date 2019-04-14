@@ -4,7 +4,8 @@ import { LayoutModule } from '@angular/cdk/layout';
 import {
   MatToolbarModule, MatSidenavModule,
   MatIconModule, MatListModule, MatFormFieldModule,
-  MatInputModule, MatButtonModule, MatSnackBarModule
+  MatInputModule, MatButtonModule, MatSnackBarModule,
+  MatDatepickerModule, MatNativeDateModule
 } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -48,7 +49,9 @@ const AppConfig: IAppConfig = {
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ]
 })
 export class MaterialSharedModule { }
