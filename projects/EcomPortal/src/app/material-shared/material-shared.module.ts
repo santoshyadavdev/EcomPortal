@@ -6,7 +6,8 @@ import {
   MatIconModule, MatListModule, MatFormFieldModule,
   MatInputModule, MatButtonModule, MatSnackBarModule,
   MatDatepickerModule, MatNativeDateModule,
-  MatTableModule, MatDividerModule
+  MatTableModule, MatDividerModule, MatMenuModule,
+  MatBadgeModule, MatSelectModule, MatButtonToggleModule
 } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -54,7 +55,11 @@ const AppConfig: IAppConfig = {
     MatDatepickerModule,
     MatNativeDateModule,
     MatTableModule,
-    MatDividerModule
+    MatDividerModule,
+    MatMenuModule,
+    MatBadgeModule,
+    MatSelectModule,
+    MatButtonToggleModule
   ]
 })
 export class MaterialSharedModule { }
