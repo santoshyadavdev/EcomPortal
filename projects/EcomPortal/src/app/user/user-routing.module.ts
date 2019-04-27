@@ -4,10 +4,12 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
 import { AuthGuard } from '../common/guard/auth.guard';
 import { UserGuard } from './guard/user.guard';
 import { ProfileComponent } from './profile/profile.component';
+import { ProductDetailsComponent } from './product/product-details/product-details.component';
+import { ProductComponent } from './product/product.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: UserDashboardComponent, canActivate: [AuthGuard, UserGuard] },
-  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard, UserGuard] },
+  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard, UserGuard] }
 ];
 
 @NgModule({

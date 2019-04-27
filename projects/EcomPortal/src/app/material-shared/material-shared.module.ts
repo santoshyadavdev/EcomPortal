@@ -7,7 +7,8 @@ import {
   MatInputModule, MatButtonModule, MatSnackBarModule,
   MatDatepickerModule, MatNativeDateModule,
   MatTableModule, MatDividerModule, MatMenuModule,
-  MatBadgeModule, MatSelectModule, MatButtonToggleModule
+  MatBadgeModule, MatSelectModule, MatButtonToggleModule,
+  MatCardModule, MatGridListModule
 } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -59,7 +60,9 @@ const AppConfig: IAppConfig = {
     MatMenuModule,
     MatBadgeModule,
     MatSelectModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatCardModule,
+    MatGridListModule
   ]
 })
 export class MaterialSharedModule { }
