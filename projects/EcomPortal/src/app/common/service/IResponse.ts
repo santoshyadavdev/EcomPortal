@@ -3,4 +3,5 @@ export interface IResponse {
   message: string;
   data: any;
   role?: string;
+  count? : number;
 }
