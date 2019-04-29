@@ -3,13 +3,15 @@ import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpErrorResponse
 import { Observable, throwError } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 import { Router } from '@angular/router';
+import { LoginService } from '../service/login.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CustomInterceptorService implements HttpInterceptor {
 
-  constructor(private router: Router) { }
+  constructor(private loginService: LoginService,
+              private router: Router) { }
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     let request = req.clone({});
@@ -23,6 +25,9 @@ export class CustomInterceptorService implements HttpInterceptor {
         return event;
       }), catchError((error: HttpErrorResponse) => {
         if (error.status === 401) {
+          sessionStorage.clear();
+          this.loginService.isLoggedIn(false);
+          this.loginService.userRole('');
           this.router.navigate(['/login']);
         }
         return throwError(error);
