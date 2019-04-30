@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { CartService } from './service/cart.service';
 import { MatTable } from '@angular/material';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -11,8 +12,9 @@ export class CartComponent implements OnInit {
 
   @ViewChild('cartTable') cartTable: MatTable<any>;
   userCart = [];
-  displayedColumns: string[] = ['imageUrl', 'productName', 'quantity', 'price', 'actions'];
-  constructor(private cartService: CartService) { }
+  displayedColumns: string[] = ['imageUrl', 'productName', 'quantity', 'price', 'total', 'actions'];
+  constructor(private cartService: CartService,
+    private router: Router) { }
 
   ngOnInit() {
     this.cartService.getUserCart()
@@ -26,4 +28,8 @@ export class CartComponent implements OnInit {
       });
   }
 
+  checkOut() {
+    this.cartService.addProductForCheckOut(this.userCart);
+    this.router.navigate(['/user/payment']);
+  }
 }
