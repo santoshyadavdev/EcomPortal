@@ -9,11 +9,14 @@ import { DashboardService } from './service/dashboard.service';
 export class DashboardComponent implements OnInit {
 
   orderData: any;
+  orders: any;
+  displayedColumns: string[] = ['_id', 'orderID', 'total', 'createdOn', 'status', 'actions'];
   constructor(private dashboardService: DashboardService) { }
 
   ngOnInit() {
     this.dashboardService.getDashboard().subscribe((result) => {
       this.orderData = result.data;
+      this.orders = result.data.orders;
     });
   }
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-admin-order-list',
@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-order-list.component.css']
 })
 export class AdminOrderListComponent implements OnInit {
+
+  @Input() orders: any;
+  displayedColumns: string[] = ['_id', 'orderID', 'total', 'createdOn', 'status', 'actions'];
+
 
   constructor() { }
 
