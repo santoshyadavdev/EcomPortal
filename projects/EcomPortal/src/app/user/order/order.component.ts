@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { UserOrderService } from './service/user-order.service';
+
 @Component({
   selector: 'app-order',
   templateUrl: './order.component.html',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderComponent implements OnInit {
 
-  constructor() { }
+  orders = [];
+  displayedColumns: string[] = ['_id', 'orderID', 'total', 'createdOn', 'status', 'actions'];
+
+  constructor(private orderService: UserOrderService) { }
 
   ngOnInit() {
+
+    this.orderService.getUserOrders().subscribe((result) => {
+      this.orders = result.data;
+    });
   }
 
 }

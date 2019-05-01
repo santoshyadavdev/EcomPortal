@@ -17,4 +17,12 @@ export class UserOrderService {
     return this.http.post<IResponse>(this.appConfig.apiEndPoint + '/order', order);
   }
 
+  getUserOrders(){
+    return this.http.get<IResponse>(this.appConfig.apiEndPoint + '/order');
+  }
+
+  getOrderDetails(orderId: any){
+    return this.http.get<IResponse>(this.appConfig.apiEndPoint + '/order/'+ orderId );
+  }
+
 }
