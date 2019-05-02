@@ -1,4 +1,4 @@
 export const environment = {
-  apiEndPoint : '',
+  apiEndPoint : 'https://ecomapidnt.herokuapp.com',
   production: true
 };
