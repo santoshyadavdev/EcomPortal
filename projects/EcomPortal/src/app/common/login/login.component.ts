@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { IUser } from '../service/user';
 import { LoginService } from '../service/login.service';
 import { MatSnackBar } from '@angular/material';
-import { EncDecService } from '@ecom/core';
+import { EncDecService } from '@lips/common';
 import { Observable } from 'rxjs';
 
 

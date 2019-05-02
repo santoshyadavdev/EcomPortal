@@ -8,7 +8,7 @@ import { APP_CONFIG } from '../../material-shared/AppConfig';
 import { IAppConfig } from '../../material-shared/IAppConfig';
 import { IResponse } from './IResponse';
 import { BehaviorSubject } from 'rxjs';
-import { EncDecService } from '@ecom/core';
+import { EncDecService } from '@lips/common';
 
 
 @Injectable({
