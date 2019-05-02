@@ -21,9 +21,9 @@ export class LoginComponent implements OnInit {
 
   loginStatus$: Observable<boolean>;
   constructor(private loginService: LoginService,
-    private snackBar: MatSnackBar,
-    private router: Router,
-    private encService: EncDecService) { }
+              private snackBar: MatSnackBar,
+              private router: Router,
+              private encService: EncDecService) { }
 
   ngOnInit() {
   }

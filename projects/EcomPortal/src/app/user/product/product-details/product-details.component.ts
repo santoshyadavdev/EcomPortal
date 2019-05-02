@@ -16,10 +16,10 @@ export class ProductDetailsComponent implements OnInit {
   quantity: FormControl;
   productDetails: any;
   constructor(private productService: ProductService,
-    private wishListService: WishlistService,
-    private cartService: CartService,
-    private snackBar: MatSnackBar,
-    private route: ActivatedRoute) { }
+              private wishListService: WishlistService,
+              private cartService: CartService,
+              private snackBar: MatSnackBar,
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.quantity = new FormControl('1');

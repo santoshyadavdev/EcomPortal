@@ -14,7 +14,7 @@ export class CartService {
   products = new BehaviorSubject<any>([]);
 
   constructor(private http: HttpClient,
-    @Inject(APP_CONFIG) private appConfig: IAppConfig) { }
+              @Inject(APP_CONFIG) private appConfig: IAppConfig) { }
 
   getUserCart() {
     return this.http.get<IResponse>(this.appConfig.apiEndPoint + '/cart');

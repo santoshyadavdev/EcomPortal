@@ -9,7 +9,7 @@ import { EncDecService } from '@ecom/core';
 export class AdminGuard implements CanActivate, CanLoad {
 
   constructor(private encService: EncDecService,
-    private router: Router) { }
+              private router: Router) { }
 
   canActivate(
     next: ActivatedRouteSnapshot,

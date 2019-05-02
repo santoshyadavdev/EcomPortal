@@ -22,9 +22,9 @@ export class MainNavComponent implements OnInit {
     );
 
   constructor(private breakpointObserver: BreakpointObserver,
-    private loginService: LoginService,
-    private categoryService: CategoryService,
-    private router: Router) { }
+              private loginService: LoginService,
+              private categoryService: CategoryService,
+              private router: Router) { }
 
   ngOnInit() {
     this.loginStatus$ = this.loginService.isLoggedIn();
@@ -47,6 +47,6 @@ export class MainNavComponent implements OnInit {
   }
 
   getProduct(categoryName: string) {
-    this.router.navigate(['/user/product'], { queryParams: { 'category': categoryName } });
+    this.router.navigate(['/user/product'], { queryParams: { category: categoryName } });
   }
 }

@@ -11,18 +11,18 @@ import { IResponse } from '../../../common/service/IResponse';
 export class UserOrderService {
 
   constructor(private http: HttpClient,
-    @Inject(APP_CONFIG) private appConfig: IAppConfig) { }
+              @Inject(APP_CONFIG) private appConfig: IAppConfig) { }
 
   placeOrder(order: any) {
     return this.http.post<IResponse>(this.appConfig.apiEndPoint + '/order', order);
   }
 
-  getUserOrders(){
+  getUserOrders() {
     return this.http.get<IResponse>(this.appConfig.apiEndPoint + '/order');
   }
 
-  getOrderDetails(orderId: any){
-    return this.http.get<IResponse>(this.appConfig.apiEndPoint + '/order/'+ orderId );
+  getOrderDetails(orderId: any) {
+    return this.http.get<IResponse>(this.appConfig.apiEndPoint + '/order/' + orderId );
   }
 
 }

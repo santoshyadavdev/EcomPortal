@@ -16,9 +16,9 @@ export class OrderUpdateComponent implements OnInit {
   displayedColumns: string[] = ['productName', 'qty', 'price', 'total'];
   orderStatus = ['Shipped', 'Delivered'];
   constructor(private orderService: AdminOrderService,
-    private route: ActivatedRoute,
-    private fb: FormBuilder,
-    private snackbar: MatSnackBar) { }
+              private route: ActivatedRoute,
+              private fb: FormBuilder,
+              private snackbar: MatSnackBar) { }
 
   ngOnInit() {
 

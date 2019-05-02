@@ -11,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
 export class CategoryService {
 
   constructor(private http: HttpClient,
-    @Inject(APP_CONFIG) private appConfig: IAppConfig) { }
+              @Inject(APP_CONFIG) private appConfig: IAppConfig) { }
 
   getCategories() {
     return this.http.get<IResponse>(this.appConfig.apiEndPoint + '/category');

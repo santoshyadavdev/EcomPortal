@@ -14,7 +14,7 @@ export class CartComponent implements OnInit {
   userCart = [];
   displayedColumns: string[] = ['imageUrl', 'productName', 'quantity', 'price', 'total', 'actions'];
   constructor(private cartService: CartService,
-    private router: Router) { }
+              private router: Router) { }
 
   ngOnInit() {
     this.cartService.getUserCart()

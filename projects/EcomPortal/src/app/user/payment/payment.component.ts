@@ -17,9 +17,9 @@ export class PaymentComponent implements OnInit {
   displayedColumns: string[] = ['imageUrl', 'productName', 'quantity', 'price', 'total'];
   public payPalConfig?: PayPalConfig;
   constructor(private cartService: CartService,
-    private orderService: UserOrderService,
-    private fb: FormBuilder,
-    private router: Router) { }
+              private orderService: UserOrderService,
+              private fb: FormBuilder,
+              private router: Router) { }
 
   ngOnInit() {
 

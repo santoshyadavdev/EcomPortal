@@ -15,7 +15,7 @@ export class ProductAddComponent implements OnInit {
   fileToUpload: File;
 
   constructor(private fb: FormBuilder,
-    public snackBar: MatSnackBar) { }
+              public snackBar: MatSnackBar) { }
 
   ngOnInit() {
     this.productForm = this.fb.group({

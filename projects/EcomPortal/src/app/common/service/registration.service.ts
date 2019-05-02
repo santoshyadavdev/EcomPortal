@@ -11,7 +11,7 @@ import { IResponse } from './IResponse';
 export class RegistrationService {
 
   constructor(private http: HttpClient,
-    @Inject(APP_CONFIG) private appConfig: IAppConfig) { }
+              @Inject(APP_CONFIG) private appConfig: IAppConfig) { }
 
   register(user: IUserRegistration) {
     return this.http.post<IResponse>(this.appConfig.apiEndPoint + '/user/registration', user);

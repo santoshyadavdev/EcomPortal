@@ -20,8 +20,8 @@ export class LoginService {
   role = new BehaviorSubject<string>('');
 
   constructor(private http: HttpClient,
-    private encService: EncDecService,
-    @Inject(APP_CONFIG) private appConfig: IAppConfig) {
+              private encService: EncDecService,
+              @Inject(APP_CONFIG) private appConfig: IAppConfig) {
     console.log(appConfig.apiEndPoint);
   }
 

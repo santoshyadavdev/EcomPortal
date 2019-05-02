@@ -11,14 +11,14 @@ export class OrderDetailsComponent implements OnInit {
 
   orderDetails: any;
   constructor(private orderService: UserOrderService,
-    private route: ActivatedRoute) { }
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe((data) => {
       this.orderService.getOrderDetails(data.get('id')).subscribe((result) => {
         this.orderDetails = result.data;
       });
-    })
+    });
   }
 
 }

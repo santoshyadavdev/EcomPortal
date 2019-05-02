@@ -10,7 +10,7 @@ import { IResponse } from '../../../common/service/IResponse';
 export class ProductService {
 
   constructor(private http: HttpClient,
-    @Inject(APP_CONFIG) private appConfig: IAppConfig) { }
+              @Inject(APP_CONFIG) private appConfig: IAppConfig) { }
 
   getAllProducts() {
     return this.http.get<IResponse>(this.appConfig.apiEndPoint + '/product');

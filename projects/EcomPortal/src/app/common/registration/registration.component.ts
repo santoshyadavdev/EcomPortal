@@ -13,8 +13,8 @@ export class RegistrationComponent implements OnInit {
 
   registrationForm: FormGroup;
   constructor(private fb: FormBuilder,
-    private snackBar : MatSnackBar,
-    private registrationService: RegistrationService) { }
+              private snackBar: MatSnackBar,
+              private registrationService: RegistrationService) { }
 
   ngOnInit() {
     this.registrationForm = this.fb.group({

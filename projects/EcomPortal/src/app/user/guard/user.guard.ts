@@ -10,7 +10,7 @@ import { EncDecService } from '@ecom/core';
 export class UserGuard implements CanActivate, CanLoad {
 
   constructor(private encService: EncDecService,
-    private router: Router) { }
+              private router: Router) { }
 
 
   canActivate(

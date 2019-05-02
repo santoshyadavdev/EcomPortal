@@ -11,7 +11,7 @@ export class CategoryComponent implements OnInit {
 
   catList: any;
   constructor(private categoryService: CategoryService,
-    private snackBar: MatSnackBar) { }
+              private snackBar: MatSnackBar) { }
 
   ngOnInit() {
    this.loadCategories();
@@ -25,7 +25,7 @@ export class CategoryComponent implements OnInit {
     });
   }
 
-  saveCategories(category:any) {
+  saveCategories(category: any) {
     this.categoryService.postCategories(category).subscribe((result) => {
       this.snackBar.open(result.message, 'Category', {
         duration: 1000

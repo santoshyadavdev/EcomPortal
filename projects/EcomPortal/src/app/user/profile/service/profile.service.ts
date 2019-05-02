@@ -12,7 +12,7 @@ import { IResponse } from '../../../common/service/IResponse';
 export class ProfileService {
 
   constructor(private http: HttpClient,
-    @Inject(APP_CONFIG) private appConfig: IAppConfig) { }
+              @Inject(APP_CONFIG) private appConfig: IAppConfig) { }
 
   getPofile() {
     return this.http.get<IResponse>(this.appConfig.apiEndPoint + '/user');

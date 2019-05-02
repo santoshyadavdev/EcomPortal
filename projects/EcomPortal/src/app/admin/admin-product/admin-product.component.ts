@@ -13,8 +13,8 @@ export class AdminProductComponent implements OnInit {
   categoryList: any;
   products: any;
   constructor(private categoryService: CategoryService,
-    private productService: AdminProductService,
-    private snackBar: MatSnackBar) { }
+              private productService: AdminProductService,
+              private snackBar: MatSnackBar) { }
 
   ngOnInit() {
     this.getCategories();

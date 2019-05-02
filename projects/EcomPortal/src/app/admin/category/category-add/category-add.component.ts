@@ -12,7 +12,7 @@ export class CategoryAddComponent implements OnInit {
   categoryForm: FormGroup;
   @Output() addcategory = new EventEmitter<any>();
   constructor(private categoryService: CategoryService,
-    private fb: FormBuilder) { }
+              private fb: FormBuilder) { }
 
   ngOnInit() {
     this.categoryForm = this.fb.group({
@@ -27,16 +27,16 @@ export class CategoryAddComponent implements OnInit {
   }
 
   addControl() {
-    const categoryControl = this.categoryForm.controls['category'] as FormArray;
+    const categoryControl = this.categoryForm.controls.category as FormArray;
     categoryControl.push(this.buildForm());
   }
 
   removeControl(i: number) {
-    const categoryControl = this.categoryForm.controls['category'] as FormArray;
+    const categoryControl = this.categoryForm.controls.category as FormArray;
     categoryControl.removeAt(i);
   }
 
   saveCategories() {
-    this.addcategory.emit(this.categoryForm.controls['category'].value);
+    this.addcategory.emit(this.categoryForm.controls.category.value);
   }
 }
