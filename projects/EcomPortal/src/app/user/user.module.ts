@@ -12,9 +12,10 @@ import { WishlistModule } from './wishlist/wishlist.module';
 import { CartModule } from './cart/cart.module';
 import { PaymentComponent } from './payment/payment.component';
 import { OrderModule } from './order/order.module';
+import { ProfileEditComponent } from './profile/profile-edit/profile-edit.component';
 
 @NgModule({
-  declarations: [UserDashboardComponent, ProfileComponent, PaymentComponent
+  declarations: [UserDashboardComponent, ProfileComponent, PaymentComponent, ProfileEditComponent
     ],
   imports: [
     CommonModule,

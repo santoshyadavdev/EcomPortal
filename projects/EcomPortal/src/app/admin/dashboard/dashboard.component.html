@@ -1,3 +1,31 @@
-<p>
-  dashboard works!
-</p>
+<mat-card class="card" *ngFor="let status of orderData?.result">
+    <mat-card-header>
+      <mat-card-title>{{status._id}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      {{status.count}}
+    </mat-card-content>
+  </mat-card>
+
+  <table class="table">
+      <thead>
+          <tr>
+              <th>ID</th>
+              <th>Order Date</th>
+              <th>Amount</th>
+              <th>Order Status</th>
+              <th>Update</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let order of orderData?.orders;trackBy: trackByFn">
+              <td>{{order._id}}</td>
+              <td>{{order.createdOn | date : 'medium'}}</td>
+              <td>{{order.total | currency: 'INR'}}</td>
+              <td>{{order.status}}</td>
+              <td>
+                  <button class="btn btn-primary" [routerLink]="['/admin/orders',order._id]">Update</button>
+              </td>
+          </tr>
+      </tbody>
+  </table>

@@ -8,10 +8,11 @@ import { ProfileService } from './service/profile.service';
 })
 export class ProfileComponent implements OnInit {
 
+  user: any;
   constructor(private profileService: ProfileService) { }
 
   ngOnInit() {
-    this.profileService.getPofile().subscribe((data) => console.log(data));
+    this.profileService.getPofile().subscribe((result) => this.user = result.data);
   }
 
 }
