@@ -20,7 +20,7 @@
         <span class="titleWidth">EcomPortal</span>
         <div>
             <button *ngIf="(role$ | async ) === 'User'" type="button" mat-icon-button routerLink="/user/cart">
-              <mat-icon>shopping_cart</mat-icon>
+              <mat-icon [matBadge]="(cart$ | async)?.data?.length" >shopping_cart</mat-icon>
             </button>
             <button *ngIf="(role$ | async ) === 'User'" type="button" mat-icon-button routerLink="/user/wishlist">
               <mat-icon>bookmark</mat-icon>

@@ -1,3 +1,34 @@
-<p>
-  profile-edit works!
-</p>
+<h1>
+  Edit Profile
+</h1>
+
+<!-- {{editForm.value | json}} -->
+
+<form [formGroup]="editForm" (ngSubmit)="updateProfile()">
+  <mat-form-field>
+    <input matInput placeholder="Firs tName" formControlName="firstName">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Last Name" formControlName="lastName">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Email" formControlName="email">
+  </mat-form-field>
+  <div formGroupName="addressInfo">
+    <mat-form-field>
+      <input matInput placeholder="Address Line1" formControlName="addressLine1">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Address Line2" formControlName="addressLine2">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="City" formControlName="city">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Pin" formControlName="pin">
+    </mat-form-field>
+  </div>
+  <div>
+    <button mat-raised-button color="primary" type="submit" >Update</button>
+  </div>
+</form>
